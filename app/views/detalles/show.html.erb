@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @detalle.cantidad %>
+</p>
+
+<p>
+  <strong>Prestamo:</strong>
+  <%= @detalle.Prestamo.id.to_s + " - " + @detalle.Prestamo.Usuario.nombres + " " + @detalle.Prestamo.Usuario.apellidos + " | " + @detalle.Prestamo.fecha.to_s  %>
+</p>
+
+<p>
+  <strong>Libro:</strong>
+  <%= @detalle.Libro.titulo %>
+</p>
+
+<%= link_to 'Editar', edit_detalle_path(@detalle), :class => "btn btn-warning text-white" %> |
+<%= link_to 'Volver', detalles_path, :class => "btn btn-danger text-white" %>

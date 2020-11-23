@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @prestamo.fecha %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @prestamo.estado %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @prestamo.Usuario.nombres + " " + @prestamo.Usuario.apellidos %>
+  
+</p>
+
+<%= link_to 'Editar', edit_prestamo_path(@prestamo), :class => "btn btn-warning text-white" %> |
+<%= link_to 'Volver', prestamos_path, :class => "btn btn-danger text-white" %>
